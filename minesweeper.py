@@ -132,7 +132,7 @@ def create_gui(grid, revealed):
     pygame.init()
     root = tk.Tk()
     root.title("Minesweeper")
-    # root.iconbitmap('spong.ico')
+    root.iconbitmap('assets/spong.ico')
 
     custom_font = font.Font(family="Helvetica", size=12, weight="bold")
 
@@ -157,10 +157,10 @@ def reveal_cell(btn, revealed, i, j):
           
     """
     if revealed[i][j] == '💣':
-        pygame.mixer.Sound.play(pygame.mixer.Sound("boom.wav"))
+        pygame.mixer.Sound.play(pygame.mixer.Sound("assets/boom.wav"))
         btn.config(text=revealed[i][j], relief=tk.SUNKEN, state=tk.DISABLED, bg='#ff6459')
     else:
-        pygame.mixer.Sound.play(pygame.mixer.Sound("button.wav"))
+        pygame.mixer.Sound.play(pygame.mixer.Sound("assets/button.wav"))
         btn.config(text=revealed[i][j], relief=tk.SUNKEN, state=tk.DISABLED, bg='#e0e0e0')
     btn.update_idletasks()
 
