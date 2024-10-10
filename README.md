@@ -1,1 +1,1 @@
-Recreation of minesweeper in my style. 
+Recreation of minesweeper in python
